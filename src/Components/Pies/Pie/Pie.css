@@ -1,0 +1,12 @@
+td {
+    border: 1px solid lightseagreen
+}
+
+table {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-collapse: collapse;
+        /* makes sure there is no padding between the cells */
+}

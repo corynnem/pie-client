@@ -8,17 +8,18 @@ import './App.css';
 // React uses interpolation with {}
 
 function App() {
-  const [sessionToken, setSessionToken] = useState('')
+  const [sessionToken, setSessionToken] = useState(undefined)
 
  
-  
+  const viewConductor = () => {
+    return sessionToken !== undefined ? <Pies token={sessionToken} /> : <Auth/>
+  }
  
   return (
     <div className="App" >
       {sessionToken}
       <Navbar/>
-      <Auth/>
-      <Pies/>
+      {viewConductor()}
     </div>
   );
 }
